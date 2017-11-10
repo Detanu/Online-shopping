@@ -1,0 +1,12 @@
+package org.jspider.java;
+
+public class DeveloperDeb {
+	public static void main(String[] args) {
+
+	}
+	public static String myFun( int n)
+	{
+		return null;
+		
+	}
+}

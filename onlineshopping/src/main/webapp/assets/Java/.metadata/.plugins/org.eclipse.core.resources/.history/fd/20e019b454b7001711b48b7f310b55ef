@@ -1,0 +1,15 @@
+package f;
+
+public class My {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		myFun(4,true);
+	}
+	public int myFun(int x,boolean z)
+	{
+		return x+3;
+		
+	}
+
+}

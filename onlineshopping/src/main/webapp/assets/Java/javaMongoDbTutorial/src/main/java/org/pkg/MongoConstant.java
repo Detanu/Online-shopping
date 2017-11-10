@@ -1,0 +1,5 @@
+package org.pkg;
+public class MongoConstant {
+public static final String  ENVDB="HSDB";
+public static final String DEVENV="192.168.1.19";
+}

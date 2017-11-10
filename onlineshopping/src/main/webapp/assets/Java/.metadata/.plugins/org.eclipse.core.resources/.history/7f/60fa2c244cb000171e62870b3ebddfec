@@ -1,0 +1,46 @@
+package org.jspider.java;
+
+import java.util.*;
+
+public class DeveloperDe {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter input::");
+		String s = sc.next();
+		boolean b = myFun(s);
+	}
+
+	public static boolean myFun(String s) {
+		char ch[] = s.toCharArray();
+		int fb = 0, rfb = 0, sb = 0, rsb = 0, tb = 0, rtb = 0;
+
+		if (s.length() % 2 == 0)
+			return false;
+		for (int j = 0; j < ch.length; j++) {
+
+			if (ch[j] == '(') {
+				fb++;
+			}
+			if (ch[j] == ')') {
+				rfb++;
+			}
+			if (ch[j] == '{') {
+				sb++;
+			}
+			if (ch[j] == '}') {
+				rsb++;
+			}
+			if (ch[j] == '[') {
+				tb++;
+			}
+			if (ch[j] == ']') {
+				rtb++;
+			}
+		}
+		if (fb == rfb && sb == rsb && tb == rtb)
+			return true;
+		else
+			return false;
+
+	}
+}

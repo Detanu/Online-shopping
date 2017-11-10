@@ -1,0 +1,27 @@
+package org.jspider.java;
+
+public class DeveloperDeb {
+	public static void main(String[] args) {
+		DeveloperDeb db=new DeveloperDeb();
+		System.out.println(db.myFun(8));
+	}
+	public  String myFun( int n)
+	{
+		int arr[]={1,2,3,4,5,6,7,8,9};
+		String s[]={"a","b","c","d","e","f","g","h","i"};
+		String spclChar[]={"@","$","%","^","&","*"};
+		String myStr="";
+		int i=0;
+		while(i<n/3){
+		myStr=myStr+s[i]+arr[i]+spclChar[i];
+		i++;
+		}
+		if(n<3)
+		{
+			System.out.println("Please enter atleas 3 ");
+		}
+		return myStr;
+		
+	}
+	
+}

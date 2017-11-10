@@ -1,0 +1,51 @@
+package org.jspider.java;
+
+import java.util.Random;
+
+public class DeveloperDeb {
+	private static final String symbols = 
+		     "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789$&@?<>~!%#";
+	public static void main(String[] args) {
+		DeveloperDeb db=new DeveloperDeb();
+		System.out.println(db.myFun(7));
+	}
+	public  String myFun( int n)
+	{
+		int arr[]={1,2,3,4,5,6,7,8,9};
+		String s[]={"a","b","c","d","e","f","g","h","i"};
+		String spclChar[]={"@","$","%","^","&","*"};
+		String myStr="";
+		int i=0;
+		while(i<n/3){
+		myStr=myStr+s[i]+arr[i]+spclChar[i];
+		i++;
+		}
+		if(n<3)
+		{
+			System.out.println("Please enter atleas 3 ");
+		}
+		return myStr;
+		
+	}
+	public static String genPassword(Random r) {
+	    while(true) {
+	        char[] password = new char[r.nextBoolean()?12:13];
+	        boolean hasUpper = false, hasLower = false, hasDigit = false, hasSpecial = false;
+	        for(int i=0; i<password.length; i++) {
+	            char ch = symbols.charAt(r.nextInt(symbols.length()));
+	            if(Character.isUpperCase(ch))
+	                hasUpper = true;
+	            else if(Character.isLowerCase(ch))
+	                hasLower = true;
+	            else if(Character.isDigit(ch))
+	                hasDigit = true;
+	            else
+	                hasSpecial = true;
+	            password[i] = ch;
+	        }
+	        if(hasUpper && hasLower && hasDigit && hasSpecial) {
+	            return new String(password);
+	        }
+	    }
+	}
+}
